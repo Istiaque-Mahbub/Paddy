@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy</title>
+    <script src="https://kit.fontawesome.com/1dd2faa088.js" crossorigin="anonymous"></script> 
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<style>
+
+    .lato-regular {
+  font-family: "Lato", sans-serif;
+}
+
+</style>
+</head>
+<body class="lato-regular w-11/12 mx-auto">
+    <header>
+        <!-- navbar starts -->
+        <nav>
+
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                      <li>
+                        <a>Shop</a>
+                      </li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl space-x-3"><span><img src="./images/logo.webp" alt=""></span>Peddy</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li>
+                        <a>Shop</a>
+                    </li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn rounded-full shadow-lg text-center"><i class="fa-regular fa-user"></i></a>
+                </div>
+              </div>
+        </nav>
+         <!-- navbar ends -->
+
+    </header>
+    <main>
+
+        <!-- hero section starts -->
+         <section class="text-center my-8 space-y-5">
+            <h3 class="text-gray-400">Bringing Families Together ❤️‍🔥 </h3>
+            <h1 class="text-3xl font-bold">Your Path to Adoption <br>Starts Here</h1>
+            <p class="text-sm text-gray-500">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br>at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <a href="#category"><button class="btn bg-[#0E7A81] text-white mt-3">View More</button></a>
+            <div class="flex justify-center">
+                <img src="./images/pet.webp" alt="">
+            </div>
+            <div class="text-center space-y-3">
+                <h1 class="text-4xl font-bold">Adopt  Your  Best Friend</h1>
+                <p class="text-gray-500 text-sm">It is a long established fact that a reader will be distracted by the readable content of a <br>page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+         </section>
+        <!-- hero section ends -->
+         <!-- button section -->
+          <div id="category" class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-6 justify-center my-10">
+            <!-- <button class="btn flex gap-4"><i class="fa-solid fa-dog"></i>Dogs</button>
+            <button class="btn flex gap-4 rounded-full bg-[#0E7A811A]"><i class="fa-solid fa-cat"></i>Cats</button>
+            <button class="btn flex gap-4"><img class="h-6 w-6 md:h-10 md:w-10" src="https://img.icons8.com/?size=80&id=BEhRgYIAUzrf&format=png" alt=""></i>Rabbits</button>
+            <button class="btn flex gap-4"><i class="fa-solid fa-dove"></i></i>Birds</button> -->
+          </div>
+
+          <!-- Best Deal For you starts -->
+           <section class="flex justify-between">
+            <h1 class="font-bold">Best Deal For you</h1>
+            <button onclick="handleSortButton()" class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+           </section>
+          <!-- Best Deal For you ends -->
+          <div id="spinner" class="flex justify-center item-center">
+            
+          </div>
+          <!-- card views section -->
+          <section  class="grid grid-cols-6 gap-3 my-10">
+            
+            
+            <div id="card-container" class="col-span-4 grid lg:grid-cols-3 gap-2">
+
+                
+            </div>
+            <div id="image-card" class="grid grid-cols-2 h-fit gap-4 col-span-2 shadow-lg">
+
+            </div>
+      
+    </section>
+
+    <div id="modal-container">
+    
+    </div>
+
+    <div id="">
+
+    </div>
+    <button id="adopt" class="hidden btn" onclick="customModal1.showModal()">open modal</button>
+<dialog id="customModal1" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-container-adopt">
+
+        <div id="countdown" class="text-2xl">5</div>
+
+    </div>
+    <div class="modal-action">
+     
+    </div>
+  </div>
+</dialog>
+         
+    </main>
+    <footer>
+
+        <footer class="footer bg-[#131313] text-base-content p-10">
+            <nav>
+              <h6 class=" text-white"><span><img src="./images/logo.webp" alt=""></span>Paddy</h6>
+              <a class="link link-hover text-white">Location: av. Washington 165, NY CA 54003</a>
+              <a class="link link-hover text-white">Phone: +31 85 964 47 25</a>
+              <a class="link link-hover text-white">Email: info@yourdomain.com</a>
+              <a class="link link-hover text-white">Openings hours: 9.00 AM - 5.00 PM</a>
+              <div class="flex gap-2">
+                <img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=13963&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="">
+              </div>
+            </nav>
+            <nav>
+              <h6 class="text-white">Useful Links</h6>
+              <a class="link link-hover text-white">Home</a>
+              <a class="link link-hover text-white">About us</a>
+              <a class="link link-hover text-white">Animal</a>
+              <a class="link link-hover text-white">Foundation</a>
+              <a class="link link-hover text-white">Contact</a>
+            </nav>
+          
+            <form>
+              <h6 class="footer-title text-white">Drop a Massage</h6>
+              <fieldset class="form-control w-80">
+                <label class="label">
+                  <span class="label-text"></span>
+                </label>
+              
+                <div class="">
+                  <input
+                    type="text"
+                    placeholder="Enter your email address"
+                    class="input input-bordered join-item" />
+                    <br>
+                  <button class="btn w-60 mt-2  text-white bg-[#0E7A81]">Subscribe</button>
+                </div>
+              </fieldset>
+            </form>
+          </footer>
+    </footer>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    
+    <div id="details-modal"></div>
+    
+      <div method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button onclick="my_modal_5.close()" class="btn w-full">Cancel</button>
+      
+    </div>
+  </div>
+</dialog>
+
+
+
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box text-center">
+    <h3 class="text-lg font-bold">Congratulations</h3>
+    <p class="py-4">Successfully Adopted</p>
+    <h1 id="countdown-container" class="my-4 text-4xl font-bold"></h1>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+    <script src="./index.js"></script>
+    <script src="./utilities.js"></script>
+</body>
+</html>
